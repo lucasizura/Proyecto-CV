@@ -1,0 +1,218 @@
+h1{font-family: monospace;font-size: 26px; }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    list-style: none;
+    text-decoration: none;
+color: white;}
+body{background-color: black;}
+header{position: fixed;right: 0;top: 0;
+z-index: 100;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 15px 3%;
+background-color: transparent;}
+
+.logo{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.navlist{display: flex;}
+
+.navlist a{
+    margin-left: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2PX SOLID transparent;
+    transition: ALL .5S EASE 0S;
+}
+
+.navlist a:hover{
+    border-bottom: 2PX SOLID white;
+}
+
+#MENU-ICON{display: none;
+    font-size: 34px;
+    z-index: 101;
+    cursor: pointer;
+}
+
+#MENU-TOGGLE{display: none;}
+
+.MENU-TOGGLE-ACTION{display: none;}
+
+.HERO{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59DEG,rgb(82, 87, 144) 0%, rgb(56, 80, 142) 25%, rgb(32, 38, 143) 75%);
+    display: grid; 
+    position: relative;
+    grid-template-columns: 1FR 1fr;
+    align-items: center;
+    gap: 2REM; 
+}
+section{padding:0 8%;
+}
+
+.HERO-TEXT H5{
+    font-size: 14PX;
+    font-weight: 400;
+    margin-bottom: 25PX;
+}
+
+.HERO-TEXT H4{
+    font-size: 25PX;
+    font-weight: 600;
+    margin-bottom: 36px;
+}
+
+.HERO-TEXT h1{font-size: 32PX;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+
+.HERO-TEXT P{
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 2;
+    letter-spacing: 1.5px;
+}
+
+.HERO-IMG img{width: 350px;border-radius:500px;border: 5PX solid rgb(65, 65, 111);
+margin: 10PX 0 0 0;
+transition: all 6s linear;}
+
+.HERO-IMG img:hover{width: 400px;opacity: .6 ;}
+
+.HERO-TEXT a{
+    display: inline-block;
+    background-color: rgb(37, 37, 109);
+    border: 1PX solid transparent;
+    padding: 10PX 10px;
+    line-height: 1.2;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 50px;
+    transition: ALL 1s ease;
+    margin-left: 15px;
+}
+
+.HERO-TEXT A:hover{
+    background-color: transparent;
+    border: 1PX SOLID white;
+    transform: translateX(10PX);
+}
+
+.ICONS {position: absolute;
+top: 50vh;
+padding: 0 3%;
+width: 10PX;
+height: 10px;
+transform:translateY(-50%) ;}
+
+.ICONS i {display: block;
+font-size: 25px;
+transition: all .5s ease; }
+
+.ICONS i:hover{
+    color: grey;
+    transform: translateY(-5px);
+}
+
+.scrolldown{
+    position: absolute;
+    bottom: 6%;
+    right: 3%;
+    font-size: 15px;
+}
+
+.scrolldown i {
+    display: block;
+    padding: 12px;
+    font-size: 30px;
+    background-color: rgb(31, 31, 82);
+    border-radius: 1000px;
+    transition:all .5s ease;
+}
+
+.scrolldown i:hover{
+    transform: translateY(-5px);
+}
+
+@media(max-width: 992px){
+    section {
+        padding: 0 3%;
+        transition: .2s;
+
+    }
+    .ICONS{
+        display: none;
+    }
+    .HERO-TEXT{
+        padding-top: 0;
+
+    }
+    .HERO-IMG{
+        text-align: center;
+    }
+    .HERO-IMG IMG{
+        width: 80%;
+        margin: 10% 0 0 10%;
+    }
+    .scrolldown{
+        display: none;
+    }
+}
+
+@MEDIA (MAX-WIDTH:600PX){
+    .MENU-ICON-ACTION{
+        display: block;
+    }
+    #MENU-ICON{
+        display: block;
+    }
+    .HERO-TEXT{
+        text-align: center;
+        padding-top: 80px;
+    }
+    .HERO-IMG IMG{
+        margin: 0;
+
+    }
+    .HERO{
+        height: 100%;
+        gap: 1REM;
+        grid-template-columns: 1fr;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200PX;
+        height: 180px;
+        background-color: rgba(29, 29, 57, 0.867);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30PX 20px;
+        transition: ALL .5S ease-in;
+    }
+
+    .navlist a{
+        display: block;
+        margin: 7px 0;
+
+    }
+
+    #menu-toggle:checked + label.MENU-ICON-ACTION + Ul{
+        right: 0;
+
+    }
+
+}
